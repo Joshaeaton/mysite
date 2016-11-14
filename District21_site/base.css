@@ -1,0 +1,127 @@
+.big {
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 0px;
+ margin-bottom: 0px;
+ max-width: 700px;
+}
+
+.nav {
+list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #843aba;
+}
+
+.foodimg {
+  padding: 20px 20px 20px 20px;
+}
+.vegi {
+  font-size: 16pt;
+  color: #8F6CE8;
+   background-color: #401c5a;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+div + p::first-line{
+  color: #ffffff;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16pt;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+html {
+  background: #8F6CE8
+}
+
+body {
+  background-color: #401c5a;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+
+}
+
+h1 {
+  background-color: #ffffff;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+h2,h4,h5,h6{
+  color: #a8ba0f;
+  font-family: 'Oswald', sans-serif;
+  font-size: 30pt;
+}
+
+h2 b{
+  color: #a8ba0f;
+  font-family: 'Oswald', sans-serif;
+  font-family: 'Oswald', sans-serif; 
+}
+
+h3{
+  color: #843aba;
+  font-family: 'Oswald', sans-serif;
+  font-size: 30pt;
+}
+
+ul div{
+  display: inline;
+  background-color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 45pt;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  color: #ffffff;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16pt;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+
+li a{
+  display: block;
+  color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20pt;
+} 
+
+li a:hover {
+  background-color: #a8ba0f; 
+}
+
+i {
+  color: #8F6CE8;
+}
+
+dt{
+  color: #ffffff;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16pt;
+}
+
+dd{
+  color: #ffffff;
+  font-family: 'Oswald', sans-serif;
+  font-size: 10pt;
+  display: block;
+}
+
+p {
+  color: #ffffff;
+}
+
+div p{
+  color: #ffffff;
+  font-family: 'Oswald', sans-serif;
+  font-size: 18pt;
+}

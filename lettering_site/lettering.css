@@ -1,0 +1,197 @@
+/*
+Developer: Josh Eaton
+Table of Contents
+HEADER - Site name, Font imports, CSS link, info, author
+TITLE BAR - Page shortcuts, logo
+MAINCONTENT - Articles, 
+Color Palette
+#1E2422 - Outer Space
+#88BEB1 - Gulf Stream
+#FF621E - Orange
+#E9CEBC - Double Spanish White
+#718A94 - Slate Gray
+*/
+/*RESET*/
+h1,h2,h3,body,div,main,article,section,img,dl,dd,dt,ul,li,form,input{
+    margin:0 0 0 0;
+    padding: 0 0 0 0;
+}
+/*NAV bar*/
+#title_bar a, .form a {
+    color: rgba(255,255,255,1);
+    text-decoration: none;
+    background-color: rgba(219,87,5,1);
+    font-family: 'Yanone Kaffeesatz';
+    font-weight: 700;
+    font-size: 2em;
+    display: block;
+    padding: 2px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+    -moz-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+    box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+    margin: 10px auto;
+	width: 250px;
+	text-align: center;
+	
+	-webkit-transition: all .1s ease;
+	-moz-transition: all .1s ease;
+	-ms-transition: all .1s ease;
+	-o-transition: all .1s ease;
+	transition: all .1s ease;
+}
+
+.form a{
+    margin: 10px auto;
+    height: 10px;
+    font-size: 12pt;
+    width:75%;
+}
+
+.logo{
+    float: none;
+    display: inline;
+}
+
+#title_bar a:active, .form a:active {
+    -webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+    -moz-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+    box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+    position: relative;
+    top: 6px;
+}
+
+
+#title_bar{
+    background-image: url("http://inetstudent1.francistuttle.com/je0866910/lettering_site/_images/book_background.jpg");
+	background-repeat: repeat;
+    display: inline-block;
+	text-align: center;
+    float: right;
+    padding-left:80%;
+    width: 100%
+}
+
+img{
+    max-width: 390px;
+    max-height: 225px;
+    width: 25%;
+    background-color: none;
+}
+/*Main Content*/
+
+body{
+    background-image: url("http://inetstudent1.francistuttle.com/je0866910/lettering_site/_images/paper.jpg");
+    background-repeat: repeat;
+    font-family: 'Source Sans Pro', cursive;
+    text-align: center;
+    color: #1E2422;
+}
+
+main{
+        background-color: #718A94;
+        border-left: dotted;
+        border-right: dotted;
+        border-bottom: dotted;
+        padding:3em 3em 0 3em;
+        max-width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+}
+
+h1{
+    background-color: #88BEB1;
+    color: #FF621E;
+    font-family: 'peralta', cursive;
+    font-size: 35pt;
+}
+
+main + h2{
+    padding-top: 30px;
+}
+
+h2 + p{
+        font-size: 16pt;
+        padding: 0em 0 0em;
+        margin: 0;
+}
+
+h2{
+    color: #FF621E;
+    font-family: 'peralta', cursive;
+    font-size: 26pt;
+    padding: 2em 0 2em;
+    text-align: center;
+}
+
+h3{
+    color: #88BEB1;
+    font-family: 'peralta', cursive;
+    font-size: 16pt;
+    text-align: center;
+}
+
+p{
+    padding: 30px;
+    font-size: 16pt;
+}
+
+dl{
+    text-align: center;
+}
+
+dt{
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0 10px;
+}
+
+ul{
+    list-style-type: none;
+    padding-bottom: 20px;
+}
+
+li{
+    font-family: 'Source Sans Pro', cursive;
+    text-align: center;
+    font-weight: 100;
+    padding: 10px 0 0;
+}
+/*Embedded Youtube*/
+.video_wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+}
+.video_wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/*Email Update Form*/
+.form
+{
+    clear: both;
+    background-color: #88BEB1;
+    border-style: dotted;
+    font-family: 'Source Sans Pro', cursive;
+    font-size: 12pt;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 40%;
+    height: 160px;
+}
+
+.form input{
+            clear: both;
+            display:block;
+            text-align: center;
+            margin: auto;
+            width: 70%;
+
+}
