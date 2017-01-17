@@ -1,0 +1,312 @@
+
+/*===================================================
+=====================================================
+Developer: Casey Clair
+Table of Contents
+1. Global Styles
+2. Nav Styles
+3. Link Styles
+4. Page Specific Styles
+5. Form Styles
+
+Color Palette:
+#43604d (dark green, nav color)
+#eea339 (orange, link and hover color)
+#333 (dark grey, footer color)
+#fec (tan, background color)
+
+=====================================================
+====================================================*/
+
+
+
+
+
+/*========================
+1. Global Styles
+=========================*/
+
+body{
+  background: #fec;
+  background: url(../_images/concrete_seamless.gif);
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1;
+}
+h1{
+  font-family: 'Special Elite', cursive;
+}
+.page-header{
+  border-bottom: 2px solid #333;
+  margin-top: 1.4em;
+  text-align: center;
+}
+.container{
+  background: #fec;
+  background: url(../_images/concrete_seamless.gif);
+  max-width: 1140px;
+}
+.fluid{
+  max-width: 100%;
+}
+/* For devices larger than 400px */
+@media (min-width: 400px) {
+  .container {
+    width: 100%;
+    padding: 0; }
+}
+
+/* mobile container */
+@media only screen and (max-width:480px) {
+  .container {
+    width: 100%;
+    padding: 0; }
+}
+.header{
+background: #fff;
+}
+.responsive-img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.img-thumbnail {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  padding: 4px;
+}
+.responsive-steps{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+@media only screen and (max-width:480px) {
+  .responsive-steps{
+    max-width: 90%;
+  }
+}
+footer{
+  background: #333;
+  border-top: 4px solid #eea339;
+  color: #fff;
+  height: 100px;
+  padding: .8em 0 .8em 0;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+ul.materials{
+  list-style-type: none;
+}
+input.mats{
+  margin-right: 5px;
+}
+.mats:checked+span{
+  text-decoration: line-through;
+}
+
+/*========================
+2. Nav Styles
+=========================*/
+ul.topnav {
+    border-bottom: 2px outset rgba(0,0,0,0.75);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #43604d;
+}
+
+/* Float the list items side by side */
+ul.topnav li {
+  display: inline;
+}
+
+/* Style the links inside the list items */
+ul.topnav li a {
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+ul.topnav li a:hover {
+  background-color: #eea339;
+}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon {
+  display: none;
+}
+.menu-icon{
+  background: #fff;
+  display: block;
+  width: 22px;
+  height: 4px;
+  margin-top: 4px;
+}
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {
+    display: none;
+  }
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+  ul.topnav.responsive {
+    position: relative;
+  }
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+/*========================
+3. Link Styles
+=========================*/
+a{
+  text-decoration: none;
+}
+#categories a{
+  color: #fff;
+}
+#categories a:hover{
+  color: #eea339;
+  text-decoration: none;
+}
+.shift{
+  position: relative;
+  top: 0;
+  transition: all .65s ease;
+}
+.shift:hover{
+  position: relative;
+  top: -10px;
+}
+.project-wrapper{
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 6px 0;
+  color: #000;
+  display: block;
+  padding: 1.4em;
+  margin: 2em;
+}
+.project-wrapper h2{
+  font-size: 2em;
+  text-align: center;
+}
+.project-wrapper p{
+  text-align: center;
+}
+@media only screen and (max-width:480px){
+  .project-wrapper h2{
+    font-size: 1.4em;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 861px) {
+  .project-wrapper h2{
+    font-size: 1.6em;
+}
+}
+.project-wrapper:hover{
+  background: #ededed;
+  color: #eea339;
+  text-decoration: none;
+}
+
+/*========================
+4. Page specific styles
+=========================*/
+
+#banner{
+background: url(../_images/home_banner.jpg) no-repeat;
+background-size: cover;
+background-position: center;
+height: 500px;
+}
+#banner h1{ 
+color: #fff;
+margin: 1.2em 0 0 1.2em;
+}
+.cat-icon img{
+	border-radius:100px;
+  box-shadow: 2px 2px 2px 2px rgba(0,0,0,.5);
+  display:block;
+	height:200px;
+	margin: 1.2em auto;
+  width:200px;
+}
+@media only screen and (min-width: 481px) and (max-width: 605px) {
+  .one-third.column{
+    margin: 0 auto;
+    width: 92%;
+  }
+}
+#categories{
+  background: url(../_images/woodgrain.jpg) no-repeat;
+  background-size: cover;
+}
+@media only screen and (min-width:607px) and (max-width: 2400px){
+  #categories{
+      height: 400px;
+    }
+    .cat-icon{
+        margin-top: 1.8em;
+        } 
+}
+@media only screen and (min-width: 2401px) and (max-width: 2600px){
+  #categories{
+      height: 510px;
+    }
+    .cat-icon{
+        margin-top: 5em;
+}
+}
+#categories h3{
+  text-align: center;
+}
+
+/*========================
+5. Form styles
+=========================*/
+
+.form-wrapper{
+background: #fff;
+border-radius: 5px;
+box-shadow: 0 0 6px 0;
+color: #000;
+display: block;
+padding: 1.4em;
+margin: 2em;
+}
+input[type="email"]:focus,input[type="text"]:focus,textarea:focus,select:focus {
+  border: 1px solid #43604D;
+}
+input[type="submit"]{
+  background: #43604d;
+  border: none;
+  color: #fff;
+}
+input[type="submit"]:hover{
+  background: #eea339;
+  color: #fff;
+}

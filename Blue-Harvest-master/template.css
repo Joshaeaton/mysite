@@ -1,0 +1,62 @@
+/*===================================================
+=====================================================
+Developer: Casey Clair
+Table of Contents
+1. Global Styles
+2. Nav Styles
+3. Link Styles
+4. Page Specific Styles
+5. Fonts
+6. Media Queries (mobile and tablet styles)
+
+Color Palette:
+#
+#
+#
+#
+#
+=====================================================
+====================================================*/
+
+
+
+/*========================
+1. Global Styles
+=========================*/
+
+/*========================
+2. Nav Styles
+=========================*/
+
+/*========================
+3. Link Styles
+=========================*/
+
+/*========================
+4. Page specific styles
+=========================*/
+
+/*========================
+5. Fonts
+=========================*/
+
+/*========================
+6. Media Queries
+=========================*/
+
+/*mobile styles*/
+
+@media only screen and (max-width:480px) {
+
+
+
+
+
+@media only screen and (min-width: 481px) and (max-width: 861px) {
+
+
+
+
+/*tablet styles*/
+
+@media only screen and (min-width:861px) {
