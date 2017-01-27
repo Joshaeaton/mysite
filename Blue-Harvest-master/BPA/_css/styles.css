@@ -1,7 +1,7 @@
 
 /*===================================================
 =====================================================
-Developer: Casey Clair
+Developers: Casey Clair, Quinton Haley
 Table of Contents
 1. Global Styles
 2. Nav Styles
@@ -11,16 +11,19 @@ Table of Contents
 
 Color Palette:
 #43604d (dark green, nav color)
+#26332a (darker green in nav gradient)
 #eea339 (orange, link and hover color)
+#c47d19 (darker orange in nav gradient)
 #333 (dark grey, footer color)
 #fec (tan, background color)
 
 =====================================================
 ====================================================*/
 
+/* Reset */
 
-
-
+@import url("normalize.css");
+@import url("skeleton.css");
 
 /*========================
 1. Global Styles
@@ -30,9 +33,6 @@ body{
   background: #fec;
   background: url(../_images/concrete_seamless.gif);
   font-family: 'Open Sans', sans-serif;
-  display: flex;
-  flex-flow: column;
-  min-height: 100vh;
 }
 main {
   flex: 1;
@@ -40,20 +40,46 @@ main {
 h1{
   font-family: 'Special Elite', cursive;
 }
+h1+p{
+  font-size: 1.2em;
+  padding: 1em;
+}
 .page-header{
   border-bottom: 2px solid #333;
+  margin: 2em auto;
+  text-align: center;
+}
+.confirm{
   margin-top: 1.4em;
   text-align: center;
 }
+.materials h2{
+  color: #43604d;
+  font-size: 1.6em;
+  font-weight: bold;
+}
+.eight.columns h2{
+  color: #43604d;
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-top: 2em;
+  padding-left: .7em;
+}
+.eight.columns p{
+  padding: 1em;
+}
+span.steps{
+  color: #eea339;
+  font-size: 1.4em;
+}
 .container{
-  background: #fec;
-  background: url(../_images/concrete_seamless.gif);
+  background: inherit;
   max-width: 1140px;
 }
 .fluid{
   max-width: 100%;
 }
-/* For devices larger than 400px */
+/* Container for devices larger than 400px */
 @media (min-width: 400px) {
   .container {
     width: 100%;
@@ -67,7 +93,24 @@ h1{
     padding: 0; }
 }
 .header{
-background: #fff;
+  background: url(../_images/woodgrain_desktop.jpg) no-repeat;
+  background-size: cover;
+  border-bottom: 4px solid #eea339;
+}
+/* Woodgrain background for mobile */
+@media only screen and (max-width:480px){
+  .header{
+    background: url(../_images/woodgrain_mobile.jpg) no-repeat;
+  }
+
+}
+.logo{
+  background: #ededed;
+  border-radius: 5px;
+  box-shadow: 0 0 6px 0;
+  display: block;
+  margin: 2em auto 2em auto;
+  padding-bottom: 1em;
 }
 .responsive-img{
   display: block;
@@ -84,24 +127,40 @@ background: #fff;
   display: block;
   max-width: 100%;
   height: auto;
+  margin-bottom: 2em;
 }
+/* responsive-steps images for mobile */
 @media only screen and (max-width:480px) {
-  .responsive-steps{
+  .responsive-steps,.responsive-img{
     max-width: 90%;
+  }
+}
+/* responsive-steps images for mobile */
+@media only screen and (max-width:1165px) {
+  .responsive-steps{
+    margin-left: 1em;
+  }
+}
+/* img-thumbnail images for mobile */
+@media only screen and (max-width:1165px) {
+  .img-thumbnail{
+    margin-left: 1em;
   }
 }
 footer{
   background: #333;
   border-top: 4px solid #eea339;
   color: #fff;
-  height: 100px;
+  height: 150px;
   padding: .8em 0 .8em 0;
-  position: relative;
   text-align: center;
   width: 100%;
 }
-ul.materials{
-  list-style-type: none;
+.materials{
+  padding: 1em;
+}
+.materials span{
+  font-size: 1.2em;
 }
 input.mats{
   margin-right: 5px;
@@ -109,17 +168,35 @@ input.mats{
 .mats:checked+span{
   text-decoration: line-through;
 }
+.back-to{
+  margin-bottom: 5em;
+}
+.tip{
+  color: #e84933;
+}
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
 
 /*========================
 2. Nav Styles
 =========================*/
 ul.topnav {
-    border-bottom: 2px outset rgba(0,0,0,0.75);
+    border-radius: 5px;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #43604d;
+    margin: 0 auto -2em auto;
+    position: relative;
+    padding-left: 75px;
+    background: linear-gradient(#43604d 0%, #26332a 100%);
+    width: 700px;
+    z-index: 999;
 }
 
 /* Float the list items side by side */
@@ -134,13 +211,12 @@ ul.topnav li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    transition: 0.3s;
-    font-size: 17px;
+    font-size: 1.2em;
 }
 
 /* Change background color of links on hover */
 ul.topnav li a:hover {
-  background-color: #eea339;
+  background: linear-gradient(#eea339 0%, #c47d19 100%);
 }
 
 /* Hide the list item that contains the link that should open and close the topnav on small screens */
@@ -154,7 +230,13 @@ ul.topnav li.icon {
   height: 4px;
   margin-top: 4px;
 }
-@media screen and (max-width:680px) {
+/* responsive navigation for mobile */
+@media screen and (max-width: 775px) {
+  ul.topnav{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
   ul.topnav li:not(:first-child) {
     display: none;
   }
@@ -176,30 +258,63 @@ ul.topnav li.icon {
   ul.topnav.responsive li a {
     display: block;
     text-align: left;
-  }
+}
+button{
+display: inline-block;
+height: 55px;
+padding: 0 20px 5px 20px;
+text-align: center;
+background-color: transparent;
+border-radius: 5px;
+border: none;
+
+ }
+ button:hover{
+  border: none;
+ }
 }
 
 /*========================
 3. Link Styles
 =========================*/
 a{
-  text-decoration: none;
-}
-#categories a{
   color: #fff;
-}
-#categories a:hover{
-  color: #eea339;
   text-decoration: none;
 }
-.shift{
-  position: relative;
-  top: 0;
-  transition: all .65s ease;
+a:hover{
+  color: #000;
 }
-.shift:hover{
-  position: relative;
-  top: -10px;
+a#current{
+  color: #eea339;
+}
+a>.logo{
+  color: #000;
+}
+.back-to a{
+  color: #43604d;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+.back-to a:hover{
+  color: #eea339;
+}
+.cat-icon{
+  display: block;
+  border-radius: 5px;
+}
+/* cat-icon for tablet */
+@media only screen and (min-width: 475px) and (max-width: 605px){
+ .cat-icon{
+   width: 100%;
+}
+}
+
+.cat-icon:hover{
+background: linear-gradient(#eea339 0%, #c47d19 100%);
+border-radius: 5px;
+box-shadow: 0 0 6px 0 #000;
+color: #000;
+transition: .5s;
 }
 .project-wrapper{
   background: #fff;
@@ -214,14 +329,13 @@ a{
   font-size: 2em;
   text-align: center;
 }
-.project-wrapper p{
-  text-align: center;
-}
+/* project-wrapper mobile */
 @media only screen and (max-width:480px){
   .project-wrapper h2{
     font-size: 1.4em;
   }
 }
+/* project-wrapper tablet */
 @media only screen and (min-width: 481px) and (max-width: 861px) {
   .project-wrapper h2{
     font-size: 1.6em;
@@ -231,6 +345,7 @@ a{
   background: #ededed;
   color: #eea339;
   text-decoration: none;
+  transition: .5s;
 }
 
 /*========================
@@ -241,13 +356,13 @@ a{
 background: url(../_images/home_banner.jpg) no-repeat;
 background-size: cover;
 background-position: center;
-height: 500px;
+height: 550px;
 }
-#banner h1{ 
+#banner h1{
 color: #fff;
 margin: 1.2em 0 0 1.2em;
 }
-.cat-icon img{
+.circle-img{
 	border-radius:100px;
   box-shadow: 2px 2px 2px 2px rgba(0,0,0,.5);
   display:block;
@@ -255,34 +370,71 @@ margin: 1.2em 0 0 1.2em;
 	margin: 1.2em auto;
   width:200px;
 }
-@media only screen and (min-width: 481px) and (max-width: 605px) {
+/* One-third columns for tablet viewport */
+@media only screen and (min-width: 475px) and (max-width: 605px) {
   .one-third.column{
     margin: 0 auto;
-    width: 92%;
+    width: 100%;
   }
 }
+.preview{
+  padding-bottom: 210px;
+}
+.white-space{
+  padding-bottom: 500px;
+}
+.contact-form{
+  padding-bottom: 90px;
+}
+.contact-form p{
+  padding: 1em;
+}
 #categories{
-  background: url(../_images/woodgrain.jpg) no-repeat;
-  background-size: cover;
+  background: #314538;
+  background: linear-gradient(#43604d 0%, #26332a 100%);
+  color: #fff;
 }
-@media only screen and (min-width:607px) and (max-width: 2400px){
-  #categories{
-      height: 400px;
-    }
-    .cat-icon{
-        margin-top: 1.8em;
-        } 
-}
+/* Banner section for very large viewport */
 @media only screen and (min-width: 2401px) and (max-width: 2600px){
-  #categories{
-      height: 510px;
+  #banner{
+      height: 650px;
     }
-    .cat-icon{
-        margin-top: 5em;
-}
 }
 #categories h3{
   text-align: center;
+}
+.six.columns{
+  margin-bottom: 2em;
+}
+.six.columns img{
+  display: block;
+  margin: 0 auto;
+}
+.six.columns h2{
+  text-align: center;
+}
+@media only screen and (max-width: 504px){
+  .six.columns{
+    width: 95%;
+  }
+  .six.columns p{
+  padding-left: 5%;
+  }
+}
+@media only screen and (min-width: 505px) and (max-width: 965px){
+  .six.columns{
+    margin-left: 0;
+    margin-right: 0;
+    width: 95%;
+  }
+  .six.columns p{
+   padding-left: 5%;
+  }
+}
+@media only screen and (min-width: 966px) and (max-width: 2600px){
+.six.columns p{
+  padding: 1.5em;
+  }
 }
 
 /*========================
@@ -297,6 +449,9 @@ color: #000;
 display: block;
 padding: 1.4em;
 margin: 2em;
+}
+label{
+font-weight: normal;
 }
 input[type="email"]:focus,input[type="text"]:focus,textarea:focus,select:focus {
   border: 1px solid #43604D;
