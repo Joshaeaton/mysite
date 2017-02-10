@@ -1,0 +1,124 @@
+article { 
+	width:90%;
+	max-width:900px;
+	margin:auto;
+	text-align: left;
+}
+
+
+/**
+ *
+ *
+	Base Type
+	Scale : based on minor 3rd, 1: 1.2
+	http://modularscale.com/scale/?px1=16&px2=66&ra1=1.2&ra2=0
+ *
+ */
+
+html {
+	font-size: 100%;
+	font-family: 'Noto Serif', serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+body {
+	font-size: 1.381rem;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+	word-wrap: break-word;
+	color: #333;
+	background: #fcfcfd;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-rendering: optimizeLegibility;
+	line-height: 1;
+	margin-top: 0;
+}
+
+h1,
+.alpha {
+	font-size: 4.125rem;
+	font-family: 'Dosis', sans-serif;
+	font-style:normal;
+	font-weight:600;
+	text-transform: uppercase;
+}
+
+h5,
+.epsilon {
+	font-size:2.865rem;
+	margin: 1.658rem 0;
+	font-family: 'Dosis','Avenir Next Condensed','Arial Narrow','Verdana','Droid San',sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 1.4;
+	color:#1F96CE;
+}
+
+h6,
+.zeta,
+blockquote {
+	font-size:2.074rem;
+	padding: 2.488rem 0 4.125rem 0;
+	font-family: 'Dosis', sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 1.4;
+	color:#004b6e;
+
+}
+
+
+/**
+ *
+	Paragraphs
+ *
+ */
+
+p {
+	margin: 0 0 1.658rem 0;
+
+}
+
+
+/* for the fancy header 
+*/
+
+.title {
+	background: #00151E;
+	color:whitesmoke;
+	width:100%;
+	margin-bottom: 2.618rem;
+	letter-spacing: .125rem;
+}
+
+.title div {
+	width:80%;
+	margin:auto;
+	padding: 1rem 0;
+	text-align: center;
+}
+h1 span { 
+	display: block;
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 1rem;
+	margin: 0 auto 0.618rem 0;
+	font-weight: 400;
+}
+
+h1 span:nth-child(3){
+	font-size: 1rem;
+	margin-top: 0.618rem;
+}
+
+
+
